@@ -1,0 +1,17 @@
+<%= form_with(model: admins_aquarium, local: true) do |form| %>
+  <% if admins_aquarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admins_aquarium.errors.count, "error") %> prohibited this admins_aquarium from being saved:</h2>
+
+      <ul>
+      <% admins_aquarium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
